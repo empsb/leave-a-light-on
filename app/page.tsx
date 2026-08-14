@@ -559,7 +559,7 @@ export default function Home() {
             return
         }
 
-        const touchScreenQuery = window.matchMedia("(max-width: 1023px)")
+        const touchScreenQuery = window.matchMedia("(any-pointer: coarse)")
         const reducedMotionQuery = window.matchMedia(
             "(prefers-reduced-motion: reduce)"
         )
@@ -1051,7 +1051,7 @@ export default function Home() {
         }
 
         if (!TURNSTILE_SITE_KEY || !turnstileToken) {
-            showToast("One sec — checking that you're human.")
+            showToast("One sec - checking that you're human.")
             return
         }
 
@@ -1624,7 +1624,7 @@ export default function Home() {
                                         </p>
 
                                         <p className="note-text">
-                                            “{readSnapshot.note}”
+                                            "{readSnapshot.note}"
                                         </p>
 
                                         <div
