@@ -1310,6 +1310,16 @@ INTRO
 ========================================================= */
 
 
+
+.page.intro-active .scene {
+  filter: blur(14px);
+  transform: scale(1.035);
+  transform-origin: top center;
+  transition:
+    filter 560ms ease,
+    transform 560ms ease;
+}
+
 .intro-backdrop {
   position: fixed;
   z-index: 2000;
@@ -1319,9 +1329,7 @@ INTRO
   justify-content: center;
   padding: 28px;
   opacity: 1;
-  background: rgba(6, 10, 51, 0.58);
-  -webkit-backdrop-filter: blur(14px);
-  backdrop-filter: blur(14px);
+  background: rgba(6, 10, 51, 0.46);
   transition:
     opacity 560ms ease,
     background 560ms ease,
@@ -1332,8 +1340,6 @@ INTRO
 .intro-backdrop-exit {
   opacity: 0;
   background: rgba(6, 10, 51, 0);
-  -webkit-backdrop-filter: blur(0);
-  backdrop-filter: blur(0);
   pointer-events: none;
 }
 
@@ -2429,9 +2435,7 @@ env(safe-area-inset-top
       14px
       max(18px, env(safe-area-inset-bottom))
       14px;
-    background: rgba(6, 10, 51, 0.64);
-    -webkit-backdrop-filter: blur(12px);
-    backdrop-filter: blur(12px);
+    background: rgba(6, 10, 51, 0.5);
   }
 
   .intro-splash {
@@ -2712,7 +2716,9 @@ TOUCH DEVICE ORIENTATION
     align-items: center;
     justify-content: center;
     padding: 0 24px 42px;
+
     background: #060a33;
+
     color: #f3e7dc;
     font-family: var(--font-bitcount-single), monospace;
     font-size: clamp(30px, 8vw, 44px);
@@ -2728,7 +2734,7 @@ TOUCH DEVICE ORIENTATION
     position: fixed;
     z-index: 12001;
     left: 50%;
-    top: calc(50% + 34px);
+    top: calc(50% + 22px);
     width: min(84vw, 460px);
     transform: translateX(-50%);
     color: rgba(241, 231, 227, 0.78);
