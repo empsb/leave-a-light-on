@@ -1,4 +1,4 @@
-import type { Metadata } from "next"
+import type { Metadata, Viewport } from "next"
 import { Bitcount_Single, Geist_Mono } from "next/font/google"
 import "./globals.css"
 
@@ -15,6 +15,8 @@ const geistMono = Geist_Mono({
 })
 
 export const metadata: Metadata = {
+    metadataBase: new URL("https://leave-a-light-on-rho.vercel.app"),
+
     title: "Leave a Light On",
     description:
         "Read a note from a stranger. Leave a light on for the next person.",
@@ -35,6 +37,13 @@ export const metadata: Metadata = {
         description:
             "Read a note from a stranger. Leave a light on for the next person.",
     },
+}
+
+export const viewport: Viewport = {
+    width: "device-width",
+    initialScale: 1,
+    viewportFit: "cover",
+    themeColor: "#060a33",
 }
 
 export default function RootLayout({

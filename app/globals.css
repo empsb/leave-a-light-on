@@ -36,9 +36,15 @@ button {
   background: #060a33;
 }
 
+
 /* =========================================================
+
+
  SCENE
+
+
  ========================================================= */
+
 
 .scene {
   position: relative;
@@ -60,9 +66,15 @@ button {
   pointer-events: none;
 }
 
+
 /* =========================================================
+
+
  METEORS
+
+
  ========================================================= */
+
 
 .meteor-area {
   position: absolute;
@@ -215,7 +227,9 @@ button {
   animation-name: meteor-gradient-right;
 }
 
-@keyframes meteor-twinkle {
+@keyframes
+meteor-twinkle
+ {
   0%,
   2.4% {
     opacity: 0;
@@ -244,7 +258,9 @@ button {
   }
 }
 
-@keyframes meteor-line-visibility {
+@keyframes
+meteor-line-visibility
+ {
   0%,
   4.9% {
     opacity: 0;
@@ -265,7 +281,9 @@ button {
   }
 }
 
-@keyframes meteor-gradient-left {
+@keyframes
+meteor-gradient-left
+ {
   0%,
   5% {
     left: -160%;
@@ -285,7 +303,9 @@ button {
   }
 }
 
-@keyframes meteor-gradient-right {
+@keyframes
+meteor-gradient-right
+ {
   0%,
   5% {
     right: -160%;
@@ -305,9 +325,15 @@ button {
   }
 }
 
+
 /* =========================================================
+
+
  HERO
+
+
  ========================================================= */
+
 
 .hero {
   position: absolute;
@@ -343,9 +369,15 @@ button {
     2px 2px 0 rgba(5, 7, 38, 0.65);
 }
 
+
 /* =========================================================
+
+
  WINDOWS
+
+
  ========================================================= */
+
 
 .window-layer {
   position: absolute;
@@ -378,9 +410,15 @@ button {
   box-shadow: none;
 }
 
+
 /* =========================================================
+
+
  PIXEL WINDOW LIGHT
+
+
  ========================================================= */
+
 
 .light {
   position: absolute;
@@ -463,7 +501,9 @@ button {
   animation: intro-window-light-on 760ms steps(1, end);
 }
 
-@keyframes intro-window-light-on {
+@keyframes
+intro-window-light-on
+ {
   0%,
   12% {
     opacity: 0;
@@ -495,16 +535,24 @@ button {
   }
 }
 
+
 /* =========================================================
+
+
  LIGHT FLICKER
+
+
  ========================================================= */
+
 
 .window-button.flicker .light {
   opacity: 1;
   animation: window-flicker-on 850ms steps(1, end);
 }
 
-@keyframes window-flicker-on {
+@keyframes
+window-flicker-on
+ {
   0%,
   12% {
     opacity: 0;
@@ -546,9 +594,15 @@ button {
   }
 }
 
+
 /* =========================================================
+
+
  PETS
+
+
  ========================================================= */
+
 
 .pet-window-clip {
   position: absolute;
@@ -588,9 +642,15 @@ button {
     translateY(0);
 }
 
+
 /* =========================================================
+
+
  PIXEL SPEECH BUBBLES
+
+
  ========================================================= */
+
 
 .window-bubble {
   position: absolute;
@@ -694,9 +754,15 @@ button {
   bottom: calc(100% - 10px);
 }
 
+
 /* =========================================================
+
+
  DOOR VISITOR COUNTER
+
+
  ========================================================= */
+
 
 .door-counter {
   position: absolute;
@@ -779,9 +845,15 @@ button {
   bottom: 3px;
 }
 
+
 /* =========================================================
+
+
  DOOR COUNTER HOVER BUBBLE
+
+
  ========================================================= */
+
 
 .door-counter-hover {
   position: absolute;
@@ -881,9 +953,15 @@ button {
     translateY(0);
 }
 
+
 /* =========================================================
+
+
  TOAST NOTIFICATION
+
+
  ========================================================= */
+
 
 .pixel-toast {
   position: fixed;
@@ -956,7 +1034,9 @@ button {
   line-height: 1.45;
 }
 
-@keyframes toast-enter {
+@keyframes
+toast-enter
+ {
   0% {
     opacity: 0;
     transform: translateX(24px);
@@ -968,9 +1048,15 @@ button {
   }
 }
 
+
 /* =========================================================
+
+
  NORMAL MODAL
+
+
  ========================================================= */
+
 
 .modal-backdrop {
   position: fixed;
@@ -1214,9 +1300,15 @@ button {
   font-size: 11px;
 }
 
+
 /* =========================================================
+
+
  INTRO
+
+
  ========================================================= */
+
 
 .intro-backdrop {
   position: fixed;
@@ -1475,9 +1567,15 @@ button {
   transform: scale(0.9);
 }
 
+
 /* =========================================================
+
+
  MINI BUILDING
+
+
  ========================================================= */
+
 
 .intro-mini-building {
   position: absolute;
@@ -1638,9 +1736,15 @@ button {
   right: calc(50% - 119px);
 }
 
+
 /* =========================================================
+
+
  INTRO CONTENT
+
+
  ========================================================= */
+
 
 .intro-content {
   position: relative;
@@ -1758,7 +1862,9 @@ button {
   min-width: 205px;
 }
 
-@keyframes intro-splash-enter {
+@keyframes
+intro-splash-enter
+ {
   0% {
     opacity: 0;
     transform: translateY(14px);
@@ -1770,7 +1876,9 @@ button {
   }
 }
 
-@keyframes intro-star-twinkle {
+@keyframes
+intro-star-twinkle
+ {
   0%,
   100% {
     opacity: 0.45;
@@ -1781,9 +1889,15 @@ button {
   }
 }
 
+
 /* =========================================================
+
+
  CUSTOM CURSOR
+
+
  ========================================================= */
+
 
 .custom-cursor-dot,
 .custom-cursor-ring {
@@ -1851,9 +1965,15 @@ button {
   }
 }
 
+
 /* =========================================================
+
+
  TABLET
+
+
  ========================================================= */
+
 
 @media (min-width: 768px) and (max-width: 1023px) {
   .hero h1 {
@@ -2028,11 +2148,18 @@ button {
   }
 }
 
+
 /* =========================================================
+
+
  MOBILE
+
+
  ========================================================= */
 
-@media (max-width: 767px) {
+
+@media (max-width: 767px),
+  (orientation: landscape) and (any-pointer: coarse) and (max-height: 520px) {
   .custom-cursor-dot,
   .custom-cursor-ring {
     display: none !important;
@@ -2192,7 +2319,9 @@ button {
 
   .modal-backdrop {
     padding:
-      max(18px, env(safe-area-inset-top))
+      max(18px,
+env(safe-area-inset-top
+))
       16px
       max(18px, env(safe-area-inset-bottom))
       16px;
@@ -2275,7 +2404,7 @@ button {
     height: 118px;
     max-height: 160px;
     border-width: 3px;
-    font-size: 13px;
+    font-size: 16px;
     resize: none;
   }
 
@@ -2294,7 +2423,9 @@ button {
 
   .intro-backdrop {
     padding:
-      max(18px, env(safe-area-inset-top))
+      max(18px,
+env(safe-area-inset-top
+))
       14px
       max(18px, env(safe-area-inset-bottom))
       14px;
@@ -2549,9 +2680,146 @@ button {
   }
 }
 
+
 /* =========================================================
+
+
  REDUCED MOTION
+
+
  ========================================================= */
+
+
+
+/* =========================================================
+ TOUCH DEVICE ORIENTATION
+ ========================================================= */
+
+@media (orientation: portrait) and (any-pointer: coarse) and (max-width: 1024px) {
+  html,
+  body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+
+  .page::before {
+    content: "ROTATE YOUR DEVICE";
+    position: fixed;
+    z-index: 12000;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 24px 42px;
+    background: #060a33;
+    color: #f3e7dc;
+    font-family: var(--font-bitcount-single), monospace;
+    font-size: clamp(30px, 8vw, 44px);
+    font-weight: 400;
+    line-height: 1;
+    letter-spacing: 0.03em;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  .page::after {
+    content: "BEST VIEWED ON DESKTOP OR LANDSCAPE";
+    position: fixed;
+    z-index: 12001;
+    left: 50%;
+    top: calc(50% + 34px);
+    width: min(84vw, 460px);
+    transform: translateX(-50%);
+    color: rgba(241, 231, 227, 0.78);
+    font-family: var(--font-geist-mono), monospace;
+    font-size: clamp(9px, 2.4vw, 12px);
+    font-weight: 500;
+    line-height: 1.4;
+    letter-spacing: 0.08em;
+    text-align: center;
+    text-transform: uppercase;
+  }
+}
+
+@media (orientation: landscape) and (any-pointer: coarse) and (max-height: 520px) {
+  html,
+  body {
+    width: 100%;
+    min-width: 100%;
+    min-height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+
+  .page {
+    width: 100%;
+    min-width: 100%;
+    min-height: 100svh;
+    margin: 0;
+    padding: 0;
+  }
+
+  .scene {
+    width: 100dvw;
+    max-width: none;
+    aspect-ratio: 1586 / 992;
+    margin: 0;
+  }
+
+  .scene-image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: top left;
+  }
+
+  .intro-backdrop {
+    display: block;
+    width: 100dvw;
+    height: 100dvh;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    overscroll-behavior-y: contain;
+    -webkit-overflow-scrolling: touch;
+    touch-action: pan-y;
+    padding:
+      max(10px, env(safe-area-inset-top))
+      max(12px, env(safe-area-inset-right))
+      max(18px, env(safe-area-inset-bottom))
+      max(12px, env(safe-area-inset-left));
+  }
+
+  .intro-splash {
+    width: min(
+      calc(
+        100dvw -
+        max(12px, env(safe-area-inset-left)) -
+        max(12px, env(safe-area-inset-right))
+      ),
+      410px
+    );
+    max-height: none !important;
+    overflow: visible !important;
+    margin: 0 auto;
+  }
+}
+
+@media (orientation: landscape) and (any-pointer: coarse) and (min-height: 521px) and (max-width: 1366px) {
+  .hero h1 {
+    font-size: 44px;
+  }
+
+  .hero p {
+    margin: 0;
+    font-size: 12px;
+  }
+}
 
 @media (prefers-reduced-motion: reduce) {
   .meteor-area {

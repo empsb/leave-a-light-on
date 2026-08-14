@@ -118,9 +118,16 @@ function getNormalizedWords(value: string) {
         .filter(Boolean)
 }
 
+function getCompactTokens(value: string) {
+    return normalizeForFiltering(value)
+        .split(/\s+/)
+        .map((token) => token.replace(/[^a-z0-9]/g, ""))
+        .filter(Boolean)
+}
+
 function containsBlockedWord(value: string) {
-    const normalized = normalizeForFiltering(value)
     const words = getNormalizedWords(value)
+    const compactTokens = getCompactTokens(value)
 
     if (
         words.some((word) =>
@@ -130,16 +137,15 @@ function containsBlockedWord(value: string) {
         return true
     }
 
-    const compact = normalized.replace(/[^a-z0-9]/g, "")
-
-    return BLOCKED_WORDS
-        .filter((word) => word.length >= 4)
-        .some((blocked) => compact.includes(blocked))
+    return compactTokens.some((token) =>
+        BLOCKED_WORDS.some((blocked) => token === blocked)
+    )
 }
 
 function containsSexualContent(value: string) {
     const normalized = normalizeForFiltering(value)
     const words = getNormalizedWords(value)
+    const compactTokens = getCompactTokens(value)
 
     if (
         words.some((word) =>
@@ -149,15 +155,15 @@ function containsSexualContent(value: string) {
         return true
     }
 
-    const compact = normalized.replace(/[^a-z0-9]/g, "")
-
     if (
-        BLOCKED_SEXUAL_WORDS
-            .filter((word) => word.length >= 4)
-            .some((blocked) => compact.includes(blocked))
+        compactTokens.some((token) =>
+            BLOCKED_SEXUAL_WORDS.some((blocked) => token === blocked)
+        )
     ) {
         return true
     }
+
+    const compact = normalized.replace(/[^a-z0-9]/g, "")
 
     if (
         BLOCKED_SEXUAL_PHRASES.some((phrase) =>
