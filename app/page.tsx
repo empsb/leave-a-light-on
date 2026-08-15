@@ -139,6 +139,18 @@ function getPetForWindow(windowId: number): PetType {
  return windowId % 2 === 0 ? "cat" : "dog"
 }
 
+function formatVisitorPlaqueCount(count: number) {
+ if (count < 10_000) {
+ return count.toLocaleString()
+ }
+
+ if (count < 1_000_000) {
+ return `${Math.floor(count / 1_000)}K`
+ }
+
+ return `${Math.floor(count / 1_000_000)}M`
+}
+
 function buildDisplayNotes(
  realNotes: WindowNoteRow[],
  hasLoadedNotes: boolean,
@@ -1513,7 +1525,7 @@ export default function Home() {
  <span className="door-counter-screw screw-bottom-right" />
 
  <span className="door-counter-number">
- {visitorCount.toLocaleString()}
+ {formatVisitorPlaqueCount(visitorCount)}
  </span>
  </span>
  </div>
@@ -1847,4 +1859,5 @@ export default function Home() {
  </main>
  )
 }
+
 
