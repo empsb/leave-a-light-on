@@ -594,6 +594,7 @@ export default function Home() {
  let hideTimeout: number | null = null
  let frameInterval: number | null = null
  let cancelled = false
+ let nextHintType: TouchHintType = "leave"
 
  const clearAnimationTimers = () => {
  if (hideTimeout !== null) {
@@ -641,7 +642,8 @@ export default function Home() {
  let hintType: TouchHintType
 
  if (canShowLeaveHint && canShowReadHint) {
- hintType = Math.random() < 0.5 ? "leave" : "read"
+ hintType = nextHintType
+ nextHintType = nextHintType === "leave" ? "read" : "leave"
  } else {
  hintType = canShowLeaveHint ? "leave" : "read"
  }
@@ -1859,5 +1861,3 @@ export default function Home() {
  </main>
  )
 }
-
-
